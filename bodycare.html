@@ -1,8 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product Catalog</title>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Brands</title>
+  <style>
+    /* CSS for the grid layout */
+    .layout {
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      text-align: center;
+    }
+
+    .layout div a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* CSS for the brand details section */
+    .brand-details {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Grid layout with skincare brands -->
+  <section class="layout">
+    <div><a href="#brand1">Brand 1</a></div>
+    <div><a href="#brand2">Brand 2</a></div>
+    <div><a href="#brand3">Brand 3</a></div>
+    <div><a href="#brand4">Brand 4</a></div>
+    <div><a href="#brand5">Brand 5</a></div>
+    <div><a href="#brand6">Brand 6</a></div>
+    <div><a href="#brand7">Brand 7</a></div>
+    <div><a href="#brand8">Brand 8</a></div>
+    <div><a href="#brand9">Brand 9</a></div>
+  </section>
+
+  <!-- Section for displaying brand details -->
+  <div id="brand-details" class="brand-details">
+    <!-- Content updates dynamically when a brand is clicked -->
+  </div>
+
+  <!-- JavaScript for handling brand click events -->
+  <script>
+    document.querySelectorAll('.layout div a').forEach((brand) => {
+      brand.addEventListener('click', function (event) {
+        event.preventDefault();
+        const brandName = this.innerText;
+
+        // Display details for the clicked brand
+        document.getElementById('brand-details').innerHTML = `
+          <h2>${brandName} Details</h2>
+          <p>Products: [List of products here]</p>
+          <p>Sustainability Score: [Sustainability score here]</p>
+          <p>Effectiveness: [Effectiveness details here]</p>
+        `;
+        document.getElementById('brand-details').style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
 </html>
