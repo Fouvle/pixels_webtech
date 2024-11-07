@@ -14,6 +14,48 @@
 
         body {
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        footer nav a:hover {
+            text-decoration: underline;
         }
 
         .catalog-container {
@@ -77,6 +119,17 @@
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="products.html">Products</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
     <div class="catalog-container">
         <h1 class="title">Our Products</h1>
         <p class="subtitle">Discover sustainable products from renowned beauty brands</p>
@@ -116,6 +169,15 @@
             </div>
         </section>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="user.html">User Page</a>
+        </nav>
+    </footer>
 
     <script>
         function handleClick(category) {
