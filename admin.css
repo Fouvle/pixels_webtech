@@ -1,0 +1,189 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .menu {
+    list-style: none;
+  }
+  
+  .menu li {
+    margin: 20px 0;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+  }
+  
+  .notification {
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-left: 10px;
+  }
+  
+  .categories {
+    margin-top: 30px;
+  }
+  
+  .categories h4 {
+    margin-bottom: 20px;
+  }
+  
+  .categories ul {
+    list-style: none;
+  }
+  
+  .categories li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .activity {
+    background-color: #00FF00;
+  }
+  
+  .posts {
+    background-color: #FF6347;
+  }
+  
+  .visits {
+    background-color: #FFD700;
+  }
+  
+  .statistics {
+    background-color: #9370DB;
+  }
+  
+  .add-category {
+    margin-top: 20px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    background-color: #ECF0F1;
+    padding: 20px;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h2 {
+    color: #2C3E50;
+  }
+  
+  .activity-chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .chart-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .chart-placeholder {
+    height: 200px;
+    background-color: #D0D3D4;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7F8C8D;
+  }
+  
+  .statistics-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .visits, .statistics {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+  }
+  
+  .circular-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #D0D3D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .bar-chart-placeholder {
+    height: 200px;
+    background-color: #D0D3D4;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7F8C8D;
+  }
+  
