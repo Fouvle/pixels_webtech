@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability Criteria</title>
+  <link rel="stylesheet" href="sustain.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Our Sustainability Criteria</h1>
+    <p>Learn how we evaluate and score products based on our comprehensive sustainability framework.</p>
+  </header>
+
+  <!-- Overview Card -->
+  <section class="overview-card">
+    <div class="card">
+      <h2>How Scoring Works</h2>
+      <p>Products are evaluated across five key categories, with each category contributing to the final sustainability score.</p>
+    </div>
+  </section>
+
+  <!-- Criteria Navigation -->
+  <nav class="criteria-nav">
+    <button class="tab-button" onclick="showTab('ingredients')">Ingredient Sourcing & Safety</button>
+    <button class="tab-button" onclick="showTab('packaging')">Packaging & Materials</button>
+    <button class="tab-button" onclick="showTab('manufacturing')">Manufacturing Process</button>
+    <button class="tab-button" onclick="showTab('water')">Water Management</button>
+    <button class="tab-button" onclick="showTab('ethics')">Ethics & Fair Trade</button>
+  </nav>
+
+  <!-- Criteria Details -->
+  <section id="criteria-details">
+    <div id="ingredients" class="tab-content">
+      <h3>Ingredient Sourcing & Safety</h3>
+      <p>30% of total score</p>
+      <ul>
+        <li><strong>Biodegradability:</strong> Ingredients must break down naturally without harming ecosystems (10 points)</li>
+        <li><strong>Sustainable Sourcing:</strong> Raw materials must be renewably and ethically sourced (8 points)</li>
+        <li><strong>Non-toxic:</strong> Ingredients must be safe for humans and aquatic life (7 points)</li>
+        <li><strong>Organic Certification:</strong> Preference for certified organic ingredients (5 points)</li>
+      </ul>
+    </div>
+
+    <!-- Add similar blocks for other criteria -->
+
+  </section>
+
+  <!-- Certification Partners -->
+  <section class="certifications">
+    <h2>Recognized Certifications</h2>
+    <p>We work with leading sustainability certification bodies to ensure our criteria align with global standards.</p>
+    <div class="certifications-grid">
+      <div class="certification-item">USDA Organic</div>
+      <div class="certification-item">Leaping Bunny</div>
+      <div class="certification-item">EcoCert</div>
+      <div class="certification-item">B Corp</div>
+    </div>
+  </section>
+
+  <script src="sustain.js"></script>
+</body>
+</html>
