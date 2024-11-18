@@ -26,13 +26,6 @@ CREATE TABLE features (
 );
 
 
-CREATE TABLE subscribers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    subscribed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE
@@ -56,7 +49,8 @@ CREATE TABLE users (
     username VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    userrole TINYINT(4) DEFAULT 2
 );
 
 CREATE TABLE sustainability_criteria (
