@@ -88,4 +88,4 @@ VALUES
 
 SELECT *
 FROM users AS admin
-WHERE userrole = 'superadmin';
+WHERE userrole = 'admin';
