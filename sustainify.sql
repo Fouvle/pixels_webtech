@@ -95,7 +95,7 @@ VALUES
 ('B Corp');
 
 SELECT *
-FROM users AS admin
+FROM users
 WHERE userrole = 'admin';
 
 -- Skincare Products
