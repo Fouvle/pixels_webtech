@@ -1,7 +1,7 @@
 <?php
 
 // Include the database configuration file to connect to the database
-include 'config.php';
+require_once 'config.php';
 
 // Enable error reporting for debugging
 error_reporting(E_ALL);
