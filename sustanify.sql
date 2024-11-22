@@ -50,7 +50,7 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    userrole enum('regular','brand_admin','superadmin') DEFAULT 'regular'
+    userrole enum('regular','admin') DEFAULT 'regular'
 );
 
 CREATE TABLE sustainability_criteria (
