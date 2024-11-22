@@ -72,6 +72,12 @@ CREATE TABLE recognized_certifications (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL
 );
+INSERT INTO categories (name)
+VALUES
+    ('haircare'),
+    ('skincare'),
+    ('bodycare'),
+    ('makeup');
 
 INSERT INTO recognized_certifications (name)
 VALUES 
