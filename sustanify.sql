@@ -1,6 +1,6 @@
-Drop DATABASE if EXISTS sustanify;
-CREATE DATABASE sustanify;
-USE sustanify;
+Drop DATABASE if EXISTS sustainify;
+CREATE DATABASE sustainify;
+USE sustainify;
 
 
 CREATE TABLE products (
