@@ -9,24 +9,28 @@
 <body>
   <div class="container">
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <div class="sidebar">
+      <!-- Profile Section -->
       <div class="profile-section">
         <div class="profile-pic">
-          <img src="https://via.placeholder.com/100" alt="Profile Image">
+          <img src="https://via.placeholder.com/50" alt="Profile Picture">
         </div>
         <h2>username</h2>
       </div>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#">REVIEWS</a></li>
-          <li><a href="#">WISHLIST</a></li>
-          <li><a href="#">SETTINGS</a></li>
-        </ul>
-      </nav>
-      <div class="logout">
-        <a href="#">log out</a>
-      </div>
-    </aside>
+    
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Wishlist</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    
+      <!-- Logout Button -->
+      <a href="#" class="logout">Log Out</a>
+    </div>
 
     <!-- Main Content -->
     <main class="main-content">
