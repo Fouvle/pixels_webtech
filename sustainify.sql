@@ -14,7 +14,7 @@ CREATE TABLE products (
     category ENUM('skincare', 'makeup', 'bodycare', 'haircare') NOT NULL,
     -- category_id INT DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+    FOREIGN KEY (category) REFERENCES categories(name) ON DELETE SET NULL
 );
 
 
@@ -104,16 +104,16 @@ VALUES
     ("Rosemary Mint Scalp & Hair Strengthening Oil", "Mielle Cosmetics", 9.99, 3.5, "images/RMHairMasque-Front_600x.png",
     "Our Rosemary Mint Scalp and Hair Oil is a nutrient-rich, intensive formula meant to help you address your hair concerns. 
     From nourishing hair follicles, smoothing split ends and help with dry scalp, this hair oil uses essential oils to provide the care your hair deserves. 
-    Use it on protective styles, including braids and weaves, and enjoy its fresh, invigorating scent during your next hot oil treatment.", 1, NOW()),
-    ("The Homecurl Curl-Defining Cream", "Fenty Beauty", 33.60, 3.6, "images/UM25_T2PRODUCT_ECOMM_HOMECURL_OPEN_1200X1500_72DPI_1.jpg", "A silicone-free gel-cream that shapes, defines + enhances curls in one step.", 1, NOW()),
-    ("Reconstructing Treatment Mask", "Cécred", 42.00, 3.7, "images/ReconstructingMask.jpg", "Hair repair in a jar. Powered by our patent-pending Bioactive Keratin Ferment, this treatment is clinically tested to reduce damage, increase visible strength, and improve shine after 1 use.", 1, NOW()),
+    Use it on protective styles, including braids and weaves, and enjoy its fresh, invigorating scent during your next hot oil treatment.", 'haircare', NOW()),
+    ("The Homecurl Curl-Defining Cream", "Fenty Beauty", 33.60, 3.6, "images/UM25_T2PRODUCT_ECOMM_HOMECURL_OPEN_1200X1500_72DPI_1.jpg", "A silicone-free gel-cream that shapes, defines + enhances curls in one step.", 'haircare', NOW()),
+    ("Reconstructing Treatment Mask", "Cécred", 42.00, 3.7, "images/ReconstructingMask.jpg", "Hair repair in a jar. Powered by our patent-pending Bioactive Keratin Ferment, this treatment is clinically tested to reduce damage, increase visible strength, and improve shine after 1 use.", 'haircare', NOW()),
     ("blue tansy treatment serum", "Adwoa Beauty", 36.00, 4.0, "images/Blue_Tansy_Treatment_Serum.jpg", 
      "the blue tansy treatment serum is silicone free and helps to smooth and promote shine without leaving hair feeling greasy or weighed down. 
-     the serum will help to reduce breakage and protect hair from heat damage during thermal styling. it is also frizz and humidity resistant.", 1, NOW()),
+     the serum will help to reduce breakage and protect hair from heat damage during thermal styling. it is also frizz and humidity resistant.", 'haircare', NOW()),
     ("ENU - Black Soap Shampoo", "Eya Naturals", 11.99, 4.3, "images/black_soap_shampoo.png", 
      "This natural shampoo is formulated with the time-honored African black soap that has pure shea butter & coconut oil to hydrate and condition your precious hair and scalp, while you shampoo. 
     It's enriched with peppermint essential oil for a rejuvenating wash day experience.
-    This is a hair-to-toe product and may be used as a body wash as well.", 1, NOW());
+    This is a hair-to-toe product and may be used as a body wash as well.", 'haircare', NOW());
 
 
 -- Skincare Products
