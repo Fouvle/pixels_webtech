@@ -50,7 +50,7 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    userrole TINYINT(4) DEFAULT 2
+    userrole enum('regular','brand_admin','superadmin') DEFAULT 'regular'
 );
 
 CREATE TABLE sustainability_criteria (
@@ -79,3 +79,7 @@ VALUES
 ('Leaping Bunny'),
 ('EcoCert'),
 ('B Corp');
+
+SELECT *
+FROM users AS admin
+WHERE userrole = 'superadmin';
