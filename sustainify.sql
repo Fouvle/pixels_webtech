@@ -283,3 +283,57 @@ VALUES
      1, 
      NOW());
 
+INSERT INTO products (name, brand, price, image_url, description, category_id, created_at)
+VALUES
+    ("ENU - Black Soap Shampoo", 
+     "Eya Naturals", 
+     11.99, 
+     "https://global.eyanaturals.com/cdn/shop/files/shampoo_1024x1024@2x.png?v=1728128429", 
+     "This natural shampoo is formulated with the time-honored African black soap that has pure shea butter & coconut oil to hydrate and condition your precious hair and scalp, while you shampoo. 
+    It's enriched with peppermint essential oil for a rejuvenating wash day experience.
+    This is a hair-to-toe product and may be used as a body wash as well.", 
+     1, 
+     NOW()),
+
+    ("ENU - Detangling Conditioner", 
+     "Eya Naturals", 
+     11.99, 
+     "https://global.eyanaturals.com/cdn/shop/files/detangling_1024x1024@2x.png?v=1728129083", 
+     " Eya Naturals Detangling conditioner will help to easily detangle your hair. 
+     Enriched with coconut oil and shea butter to nourish and condition your hair. 
+     Helps reduce breakage and promotes growth. Every naturalista’s dream!", 
+     1, 
+     NOW()),
+
+    ("ENU - Leave-in Conditioner", 
+     "Eya Naturals", 
+     11.99, 
+     "https://global.eyanaturals.com/cdn/shop/files/leave-in_1024x1024@2x.png?v=1728128430", 
+     "The goodness of pure Shea Butter and Coconut Oil in a lighter and deep penetrating lotion, without any greasy buildup. Can be used on damp or dry hair.", 
+     1, 
+     NOW()),
+
+    ("ENU - Anti-Itch Hair & Scalp Spray", 
+     "Eya Naturals", 
+     9.99, 
+     "https://global.eyanaturals.com/cdn/shop/files/hair-scalp-spray_c89e56a1-4eef-4dcd-9b3b-471042c1f2b3_1024x1024@2x.png?v=1728128430", 
+     "Eya Naturals All-in-one ANTI-ITCH Hair and Scalp Spray 
+     (250ml and 500ml Refill Pack) is for protective styles such as braids, twists, cornrows, weaves, as well as locs. 
+     This is a simple solution to combat dryness and moisturize your hair as well.
+     The Eya Anti-Itch Hair & Scalp Spray is all you need when you have protective styles. 
+     No need for additional oils or products when you use this spray. 
+     Can also be used when not in protective styles to moisturize hair.", 
+     1, 
+     NOW()),
+
+    ("ENU - Shea Body & Hair Butter", 
+     "Eya Naturals", 
+     9.99, 
+     "https://global.eyanaturals.com/cdn/shop/files/hair-body-butter_1024x1024@2x.png?v=1728128430", 
+     "Pure, unrefined nutrient-rich Shea butter, whipped with all natural nourishing oils such as Coconut oil, Vitamin E oil and Essential Oils into a soft, fluffy, wonderfully-smelling butter, that is easily absorbed. 
+     Use as a daily body butter to moisturize hair and skin.
+     This product may melt in very hot weather, but don't worry it's safe to use.", 
+     1, 
+     NOW());
+
+
