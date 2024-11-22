@@ -52,13 +52,20 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     userrole enum('regular','admin') DEFAULT 'regular'
 );
-
+CREATE TABLE sections (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    icon VARCHAR(255) DEFAULT NULL
+);
 CREATE TABLE sustainability_criteria (
     id INT AUTO_INCREMENT PRIMARY KEY,
     category VARCHAR(255) NOT NULL,
     weight_percentage INT NOT NULL,
     description TEXT NOT NULL
 );
+
+
 
 INSERT INTO sustainability_criteria (category, weight_percentage, description)
 VALUES 
@@ -336,4 +343,7 @@ VALUES
      1, 
      NOW());
 
-
+INSERT INTO sections (title, content, icon) VALUES
+('Our Mission', 'We believe that beauty shouldn\'t come at the cost of our planet. Our mission is to...', 'path-to-mission-icon'),
+('Sustainability Tracking', 'We meticulously evaluate beauty products across multiple sustainability criteria...', 'path-to-tracking-icon'),
+('Brand Spotlight', 'Discover carefully vetted brands that prioritize sustainability...', 'path-to-spotlight-icon');
