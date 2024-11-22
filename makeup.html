@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup Brands</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Grid Layout for Brands */
+    .layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .layout div {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .layout div a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    /* Hover effect */
+    .layout div:hover {
+      background-color: #f9f9f9;
+      transform: translateY(-3px);
+      transition: 0.3s;
+    }
+
+    /* Details Section */
+    .brand-details {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <h1>Makeup Brands</h1>
+
+  <!-- Grid layout for makeup brands -->
+  <section class="layout">
+    <div><a href="fenty.html">Fenty Beauty</a></div>
+    <div><a href="mac.html">MAC Cosmetics</a></div>
+    <div><a href="nars.html">NARS</a></div>
+    <div><a href="huda.html">Huda Beauty</a></div>
+    <div><a href="maybelline.html">Maybelline</a></div>
+    <div><a href="loreal.html">L’Oréal Paris</a></div>
+    <div><a href="urban.html">Urban Decay</a></div>
+    <div><a href="benefit.html">Benefit Cosmetics</a></div>
+    <div><a href="anastasia.html">Anastasia Beverly Hills</a></div>
+  </section>
+
+  <!-- Details Section -->
+  <div id="brand-details" class="brand-details">
+    <!-- Content updates dynamically -->
+  </div>
+
+  <!-- JavaScript for handling click events -->
+  <script>
+    document.querySelectorAll('.layout div a').forEach((brand) => {
+      brand.addEventListener('click', function (event) {
+        event.preventDefault();
+        const brandName = this.innerText;
+
+        // Display details dynamically
+        document.getElementById('brand-details').innerHTML = `
+          <h2>${brandName} Details</h2>
+          <p>Top Products: [Product list here]</p>
+          <p>Sustainability Score: [Score here]</p>
+          <p>Reviews: [Display reviews here]</p>
+          <p><a href="reviews.php?brand=${brandName}" target="_blank">Write a Review</a></p>
+        `;
+        document.getElementById('brand-details').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
