@@ -1,189 +1,221 @@
-/* General reset */
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .container {
-    display: flex;
-    width: 100%;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background-color: #2C3E50;
-    color: white;
-    padding: 20px;
-  }
-  
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  
-  .profile-image {
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .menu {
-    list-style: none;
-  }
-  
-  .menu li {
-    margin: 20px 0;
-  }
-  
-  .menu a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-size: 18px;
-  }
-  
-  .notification {
-    background-color: red;
-    border-radius: 50%;
-    padding: 2px 8px;
-    margin-left: 10px;
-  }
-  
-  .categories {
-    margin-top: 30px;
-  }
-  
-  .categories h4 {
-    margin-bottom: 20px;
-  }
-  
-  .categories ul {
-    list-style: none;
-  }
-  
-  .categories li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .activity {
-    background-color: #00FF00;
-  }
-  
-  .posts {
-    background-color: #FF6347;
-  }
-  
-  .visits {
-    background-color: #FFD700;
-  }
-  
-  .statistics {
-    background-color: #9370DB;
-  }
-  
-  .add-category {
-    margin-top: 20px;
-    background-color: #34495E;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  /* Main Content */
-  .main-content {
-    flex: 1;
-    background-color: #ECF0F1;
-    padding: 20px;
-  }
-  
-  .dashboard-header {
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-header h2 {
-    color: #2C3E50;
-  }
-  
-  .activity-chart {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .chart-controls {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .chart-placeholder {
-    height: 200px;
-    background-color: #D0D3D4;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #7F8C8D;
-  }
-  
-  .statistics-section {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .visits, .statistics {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 48%;
-  }
-  
-  .circular-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #D0D3D4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .bar-chart-placeholder {
-    height: 200px;
-    background-color: #D0D3D4;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #7F8C8D;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Color Variables */
+:root {
+  --pink-primary: #db2777;
+  --pink-hover: #be185d;
+  --purple-light: #faf5ff;
+  --pink-light: #fdf2f8;
+  --text-dark: #2C3E50;
+  --text-light: white;
+  --bg-light: #ECF0F1;
+  --border-gray: #D0D3D4;
+}
+
+/* General Layout */
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar - Horizontal Navigation Bar */
+.sidebar {
+  display: flex;
+  align-items: center;
+  background-color: var(--pink-primary);
+  color: var(--text-light);
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Push menu items to the right */
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Navigation Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 15px; /* Even spacing between menu items */
+}
+
+.menu a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: var(--pink-hover);
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push categories to the far right */
+}
+
+.categories ul {
+  display: flex;
+  list-style: none;
+  gap: 10px; /* Space between category items */
+}
+
+.categories li {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.activity { background-color: var(--pink-primary); }
+.posts { background-color: var(--pink-hover); }
+.visits { background-color: var(--purple-light); }
+.statistics { background-color: var(--pink-light); }
+
+/* Add Category Button */
+.add-category {
+  margin-left: 15px;
+  background-color: var(--pink-hover);
+  color: var(--text-light);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-category:hover {
+  background-color: var(--pink-primary);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-top: 70px; /* Adjust for navigation bar height */
+  padding: 20px;
+  background-color: var(--bg-light);
+}
+
+/* Dashboard Header */
+.dashboard-header h2 {
+  color: var(--text-dark);
+}
+
+/* Activity Chart */
+.activity-chart {
+  background-color: var(--pink-light);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  height: 200px;
+  background-color: var(--border-gray);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-dark);
+}
+
+/* Statistics Section */
+.statistics-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ensures proper vertical alignment */
+  gap: 20px; /* Adds space between the two sections */
+}
+
+/* Individual Cards (Visits and Statistics) */
+.visits, .statistics {
+  background-color: var(--pink-light);
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(50% - 10px); /* Ensures equal width with gap adjustment */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for clarity */
+  text-align: center;
+}
+
+/* Adjust Circular Stats */
+.circular-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adjusted spacing for consistency */
+  margin-top: 20px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--purple-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--pink-primary);
+  text-align: center;
+}
+
+.circle span {
+  font-size: 12px;
+  color: var(--pink-hover);
+  margin-top: 5px;
+}
+
+/* Bar Chart Placeholder */
+.bar-chart-placeholder {
+  height: 200px;
+  background-color: var(--border-gray);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-dark);
+}
+
   
