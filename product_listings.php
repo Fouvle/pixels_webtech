@@ -68,22 +68,22 @@ $product = $result->fetch_assoc();
                 </button>
             </div>
         </div>
-        <section class="comment-section">
-            <div class="container">
-                <h2>Tell us about your experience</h2>
-                <form>
-                   <textarea placeholder="Add Your Comment"></textarea>
-                   <div class="btn">
-                        <input id="submit" type="submit" value="Submit Comment">
-                        <button id="clear" type="button">Clear</button>
-                    </div>
-                </form>
+        <div class="container">
+            <h2>Leave a Comment</h2>
+            <form id="comment-form">
+                <label for="comment-textarea" class="sr-only">Your Comment</label>
+                <textarea id="comment-textarea" placeholder="Write your comment here..." required></textarea>
+                <div class="btn">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="comments">
+            <h2>Comments</h2>
+            <div id="comment-box">
+                <!-- User comments will appear here -->
             </div>
-            <div class="comments">
-               <h2>Comments</h2>
-                <div id="comment-box"></div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <script src="product_details.js"></script>
