@@ -29,6 +29,27 @@ if (isset($_GET['brand'])) {
             border: 1px solid #ddd;
             padding: 10px;
         }
+
+        .reviews {
+            margin-top: 20px;
+        }
+
+        .review {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .review strong {
+            color: #333;
+        }
+
+        .review p {
+            margin: 5px 0;
+        }
+
     </style>
 </head>
 <body>
