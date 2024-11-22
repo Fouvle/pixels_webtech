@@ -21,7 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $role = 'regular'; // Regular admin
 
    //echo $hashed_password;
-    $conn = connectDB();
+   $checkQuery = "SELECT id FROM users WHERE email = '$email'";
+    $result = mysqli_query($conn, $checkQuery);
+    if (mysqli_num_rows($result) > 0) {
+        die('This email is already registered. Please use a different email.');
+    }
+    
     $query = "INSERT INTO users (fname, lname, email, password_hash, userrole, created_at, updated_at)
                VALUES ('$fname', '$lname', '$email', '$hashed_password', '$role', NOW(), NOW())";
     
