@@ -4,14 +4,12 @@ $username = 'root';   // Database username (use your database username)
 $password = '';       // Database password (use your database password)
 $dbname = 'sustanify'; // Database name
 
-// Create a connection
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+function connect_db(){
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+    // Checking connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    return $conn;
 }
-
-// Optionally, set the character set
-$conn->set_charset("utf8");
 ?>
