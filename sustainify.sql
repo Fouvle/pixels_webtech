@@ -11,7 +11,8 @@ CREATE TABLE products (
     rating DECIMAL(3, 2) NOT NULL CHECK (rating BETWEEN 0 AND 5),
     image_url VARCHAR(255) DEFAULT NULL,
     description TEXT DEFAULT NULL,
-    category_id INT DEFAULT NULL,
+    category ENUM('skincare', 'makeup', 'bodycare', 'haircare') NOT NULL,
+    -- category_id INT DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
 );
@@ -343,7 +344,26 @@ VALUES
      1, 
      NOW());
 
+-- Skincare Products
+INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
+('Hydrating Face Cream', 'Eco Glow', 34.99, 4.5, 'images/hydrating-cream.jpg', 'Intense moisture for all skin types with natural ingredients', 'skincare'),
+('Gentle Facial Cleanser', 'Green Essence', 24.99, 4.3, 'images/gentle-cleanser.jpg', 'Mild daily cleanser with organic botanical extracts', 'skincare'),
+('Vitamin C Serum', 'Pure Radiance', 45.50, 4.7, 'images/vitamin-c-serum.jpg', 'Brightening serum to even skin tone and boost collagen', 'skincare'),
+('Nourishing Night Cream', 'Botanical Beauty', 39.99, 4.4, 'images/night-cream.jpg', 'Overnight regenerative cream with plant-based peptides', 'skincare'),
+('Hyaluronic Acid Moisturizer', 'Hydra Glow', 32.50, 4.6, 'images/hyaluronic-moisturizer.jpg', 'Intense hydration with multi-molecular hyaluronic acid', 'skincare');
+
+-- Makeup Products
+INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
+('Mineral Foundation', 'Clean Beauty', 42.00, 4.6, 'images/mineral-foundation.jpg', 'Zero-waste powder foundation with natural minerals', 'makeup'),
+('Tinted Moisturizer', 'Vegan Glam', 36.99, 4.5, 'images/tinted-moisturizer.jpg', 'Lightweight coverage with SPF protection', 'makeup'),
+('Organic Lipstick', 'Eco Chic', 24.50, 4.4, 'images/organic-lipstick.jpg', 'Long-lasting color with natural plant-based ingredients', 'makeup'),
+('Cream Blush', 'Natural Glow', 29.99, 4.3, 'images/cream-blush.jpg', 'Smooth, buildable cheek color with sustainable packaging', 'makeup'),
+('Eyeshadow Palette', 'Green Cosmetics', 48.00, 4.7, 'images/eyeshadow-palette.jpg', 'Versatile palette with highly pigmented, cruelty-free shades', 'makeup');
+
 INSERT INTO sections (title, content, icon) VALUES
 ('Our Mission', 'We believe that beauty shouldn\'t come at the cost of our planet. Our mission is to...', 'path-to-mission-icon'),
 ('Sustainability Tracking', 'We meticulously evaluate beauty products across multiple sustainability criteria...', 'path-to-tracking-icon'),
 ('Brand Spotlight', 'Discover carefully vetted brands that prioritize sustainability...', 'path-to-spotlight-icon');
+
+
+    
