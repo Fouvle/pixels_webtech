@@ -48,5 +48,26 @@ if (isset($_GET['brand'])) {
 
     <a href="index.html">Back to Skincare Brands</a>
 
+    <h2>Reviews</h2>
+    <section class="reviews">
+        <?php
+        $stmt = $pdo->prepare("SELECT reviewer_name, comment, rating, created_at FROM reviews WHERE brand_name = :brand_name AND product_name = :product_name ORDER BY created_at DESC");
+        $stmt->execute(['brand_name' => $brand, 'product_name' => $product['product_name']]);
+        $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if ($reviews):
+            foreach ($reviews as $review): ?>
+                <div class="review">
+                    <p><strong><?php echo htmlspecialchars($review['reviewer_name']); ?></strong> (<?php echo htmlspecialchars($review['created_at']); ?>)</p>
+                    <p>Rating: <?php echo htmlspecialchars($review['rating']); ?>/5</p>
+                    <p><?php echo htmlspecialchars($review['comment']); ?></p>
+                </div>
+            <?php endforeach; 
+        else: ?>
+            <p>No reviews yet. Be the first to write one!</p>
+        <?php endif; ?>
+    </section>
+
+
 </body>
 </html>
