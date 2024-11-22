@@ -239,3 +239,47 @@ VALUES
      "A luxe ritual made easy. This 2-step ritual begins with a Fermented Rice & Rose Protein Powder that instantly transforms into a water-activated, fortifying hair rinse treatment followed by a conditioning Silk Rinse to balance softness and shine.", 
      1, 
      NOW());
+
+
+INSERT INTO products (name, brand, price, image_url, description, category_id, created_at)
+VALUES
+    ("blue tansy treatment serum", 
+     "Adwoa Beauty", 
+     36.00, 
+     "https://www.adwoabeauty.com/cdn/shop/files/Blue_Tansy_Treatment_Serum_2.0oz_2000px_1600x.jpg?v=1700756550", 
+     "the blue tansy treatment serum is silicone free and helps to smooth and promote shine without leaving hair feeling greasy or weighed down. 
+     the serum will help to reduce breakage and protect hair from heat damage during thermal styling. it is also frizz and humidity resistant.", 
+     1, 
+     NOW()),
+
+    ("melonberry frizz fighting smoothing gel + vitamin c", 
+     "Adwoa Beauty", 
+     24.00, 
+     "https://www.adwoabeauty.com/cdn/shop/products/Melonberry_Smoothing_Gel_8oz_230318_2k_1600x.jpg?v=1679231161", 
+     "our melonberry™ frizz-fighting smoothing gel +vitamin C is no ordinary gel. 
+     it promotes strong hair and increased elasticity, allowing for bouncy, luscious curls. 
+     in addition to its ability to provide and lock in moisture, it reacts as a weightless volumizer and lifts your hair to make it appear fuller and softer.", 
+     1, 
+     NOW()),
+
+    ("hair milk leave-in conditioner with melonberry", 
+     "Adwoa Beauty", 
+     24.00, 
+     "https://www.adwoabeauty.com/cdn/shop/products/melonberry_2_1600x.png?v=1664631642", 
+     "the multi-benefit melonberry™ hair milk smooths, moisturizes, detangles, and softens without weighing down fine hair. ", 
+     1, 
+     NOW()),
+
+    ("baomint moisturizing curl defining cream", 
+     "Adwoa Beauty", 
+     14.00, 
+     "https://www.adwoabeauty.com/cdn/shop/files/baomint_cream_mini_1600x.jpg?v=1730405469", 
+     "a creamy + rich styler that will leave your strands shiny, silky, and smooth just the way you like it, 
+     this product was formulated to be adaptable! based on the density and the desired volume of your curls, feel free to use more or less. 
+     the adwoa beauty moisturizing curl defining cream contains baobab and cactus oil as a base, both being superfoods with omega 6 + 9 fatty acids, and vitamin e, a defense against free radicals. 
+     it leaves the hair soft and moisturized with the added benefit of amazing slip to help with detangling during styling sessions. 
+     this product gives a soft to medium hold and works well as a wash ‘n’ go styler servicing wavy or curly hair textures. 
+     use on wet, damp or dry hair along with our leave in conditioning styler. ", 
+     1, 
+     NOW());
+
