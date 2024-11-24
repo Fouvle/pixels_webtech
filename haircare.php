@@ -1,18 +1,16 @@
 <?php
 include 'db.php';
-
-// Fetch skincare products from the database
-$sql = "SELECT * FROM products WHERE category = 'skincare' ORDER BY created_at DESC";
+// Fetch haircare products from the database
+$sql = "SELECT * FROM products WHERE category = 'haircare' ORDER BY created_at DESC";
 $result = $conn->query($sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustanify - Skincare</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"> 
+  <title>Sustanify - Haircare</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="min-h-screen bg-gray-50">
   <!-- Navigation -->
@@ -24,21 +22,20 @@ $result = $conn->query($sql);
           <span class="ml-2 text-xl font-semibold">Sustanify</span>
         </div>
         <div class="hidden md:flex items-center space-x-6">
-          <a href="skincare.php" class="text-pink-600 font-semibold">Skincare</a>
+          <a href="skincare.php" class="text-gray-600 hover:text-pink-600">Skincare</a>
           <a href="makeup.php" class="text-gray-600 hover:text-pink-600">Makeup</a>
           <a href="bodycare.php" class="text-gray-600 hover:text-pink-600">Bodycare</a>
-          <a href="haircare.php" class="text-gray-600 hover:text-pink-600">Haircare</a>
+          <a href="haircare.php" class="text-pink-600 font-semibold">Haircare</a>
           <a href="#" class="text-gray-600 hover:text-pink-600">Brands</a>
           <a href="#" class="text-gray-600 hover:text-pink-600">About</a>
         </div>
       </div>
     </div>
   </nav>
-
-  <!-- Skincare Products -->
+  <!-- Haircare Products -->
   <section class="max-w-6xl mx-auto px-4 py-16">
     <div class="flex justify-between items-center mb-8">
-      <h2 class="text-2xl font-bold">Sustainable Skincare</h2>
+      <h2 class="text-2xl font-bold">Sustainable Haircare</h2>
       <div class="flex items-center gap-4">
         <button class="flex items-center gap-2 text-gray-600 hover:text-pink-600">
           <svg class="h-4 w-4">...</svg>
@@ -49,7 +46,7 @@ $result = $conn->query($sql);
     <div class="grid md:grid-cols-4 gap-6">
       <?php
       if ($result->num_rows > 0) {
-        // Output each skincare product from the database
+        // Output each haircare product from the database
         while ($row = $result->fetch_assoc()) {
           echo '<a href="product_listing.php?id=' . $row['id'] . '" class="block">';
           echo '<div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">';
@@ -67,15 +64,13 @@ $result = $conn->query($sql);
           echo '</a>';
         }
       } else {
-        echo '<p>No skincare products found.</p>';
+        echo '<p>No haircare products found.</p>';
       }
-
       // Close the database connection
       $conn->close();
       ?>
     </div>
   </section>
-
-  <script src="skincare.js"></script>
+  <script src="haircare.js"></script>
 </body>
 </html>

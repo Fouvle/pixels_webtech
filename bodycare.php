@@ -26,8 +26,8 @@ $result = $conn->query($sql);
         <div class="hidden md:flex items-center space-x-6">
           <a href="skincare.php" class="text-gray-600 hover:text-pink-600">Skincare</a>
           <a href="makeup.php" class="text-pink-600 font-semibold">Makeup</a>
-          <a href="#" class="text-gray-600 hover:text-pink-600">Bodycare</a>
-          <a href="#" class="text-gray-600 hover:text-pink-600">Haircare</a>
+          <a href="bodycare.php" class="text-gray-600 hover:text-pink-600">Bodycare</a>
+          <a href="haircare.php" class="text-gray-600 hover:text-pink-600">Haircare</a>
           <a href="#" class="text-gray-600 hover:text-pink-600">Brands</a>
           <a href="#" class="text-gray-600 hover:text-pink-600">About</a>
         </div>
@@ -51,7 +51,7 @@ $result = $conn->query($sql);
       if ($result->num_rows > 0) {
         // Output each makeup product from the database
         while ($row = $result->fetch_assoc()) {
-          echo '<a href="product.php?id=' . $row['id'] . '" class="block">';
+          echo '<a href="product_listing.php?id=' . $row['id'] . '" class="block">';
           echo '<div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">';
           echo '<div class="aspect-square bg-gray-100 rounded-lg mb-4">';
           echo '<img src="' . $row['image_url'] . '" alt="' . $row['name'] . '" class="w-full h-full object-cover rounded-lg" />';
