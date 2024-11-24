@@ -65,15 +65,6 @@ CREATE TABLE sustainability_criteria (
     description TEXT NOT NULL
 );
 
-CREATE TABLE user_reviews(
-    commentID INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    comment VARCHAR NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
-
-
-
 INSERT INTO sustainability_criteria (category, weight_percentage, description)
 VALUES 
 ('Ingredient Sourcing & Safety', 30, 'Evaluation based on biodegradability, sustainable sourcing, non-toxic properties, and organic certification.'),
