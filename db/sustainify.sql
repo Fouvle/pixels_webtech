@@ -12,7 +12,6 @@ CREATE TABLE products (
     image_url VARCHAR(255) DEFAULT NULL,
     description TEXT DEFAULT NULL,
     category ENUM('skincare', 'makeup', 'bodycare', 'haircare') NOT NULL,
-    -- category_id INT DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (category) REFERENCES categories(name) ON DELETE SET NULL
 );
