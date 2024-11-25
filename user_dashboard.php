@@ -20,10 +20,9 @@
     
       <!-- Navigation Menu -->
       <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Browse</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Reviews</a></li>
+        <li><a href="../view/index.php">Home</a></li>
+        <li><a href="../view/product_listings.php">Browse</a></li>
+        <li><a href="../view/about.php">About</a></li>
         <li><a href="#">Wishlist</a></li>
         <li><a href="#">Settings</a></li>
       </ul>
