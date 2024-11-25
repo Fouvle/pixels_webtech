@@ -1,10 +1,19 @@
+<?php
+include 'config.php';
+
+session_start();
+if ($_SESSION['role'] !== 'admin') {
+    die('Access denied. Admins only.');
+}
+?>
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="admin.css">
+  <title>Administrator Dashboard</title>
+  <link rel="stylesheet" href="../assets/admin.css">
 </head>
 <body>
   <div class="container">
@@ -15,24 +24,12 @@
         <h3>[insert username]</h3>
       </div>
       <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Product Catalog</a>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Log Out</a></li>
+        <li><a href="../view/index.php">Home</a></li>
+        <li><a href="../view/product_listings.php">Product Catalog</a>
+        <li><a href="../view/about.php">About</a></li>
+        <li><a href="../actions/logout.php">Log Out</a></li>
         <li><a href="#">Settings</a></li>
       </ul>
-      <!--
-      <div class="categories">
-        <h4>Categories</h4>
-        <ul>
-          <li><span class="circle activity"></span> Activity</li>
-          <li><span class="circle posts"></span> Posts</li>
-          <li><span class="circle visits"></span> Visits</li>
-          <li><span class="circle statistics"></span> Statistics</li>
-        </ul>
-        <button class="add-category">+ Add Category</button>
-      </div>
-      -->
     </div>
     
     <!-- Main Content -->
