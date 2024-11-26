@@ -34,7 +34,7 @@
     <!-- Main Content -->
     <main class="main-content">
       <section class="welcome-section">
-        <h1>WELCOME [USER'S NAME]!</h1>
+        <h1>WELCOME!</h1>
         <p>Here are some products that are trending today</p>
         <div class="trending-products">
           <div class="product-placeholder"></div>
