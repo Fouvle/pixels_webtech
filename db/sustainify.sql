@@ -65,6 +65,15 @@ CREATE TABLE sustainability_criteria (
     description TEXT NOT NULL
 );
 
+CREATE TABLE wishlist (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id INT NOT NULL,  
+    product_id INT NOT NULL, 
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+
 INSERT INTO sustainability_criteria (category, weight_percentage, description)
 VALUES 
 ('Ingredient Sourcing & Safety', 30, 'Evaluation based on biodegradability, sustainable sourcing, non-toxic properties, and organic certification.'),
