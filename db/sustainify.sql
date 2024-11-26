@@ -131,10 +131,10 @@ INSERT INTO products (name, brand, price, rating, image_url, description, catego
 -- Makeup Products
 INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
 ('Pro Filtr Soft Matte Longwear Foundation', 'Fenty Beauty', 42.00, 4.6, 'images/mineral-foundation.jpg', 'Zero-waste powder foundation with natural minerals', 'makeup'),
-('Tinted Moisturizer', 'Vegan Glam', 36.99, 4.5, 'images/tinted-moisturizer.jpg', 'Lightweight coverage with SPF protection', 'makeup'),
-('Organic Lipstick', 'Eco Chic', 24.50, 4.4, 'images/organic-lipstick.jpg', 'Long-lasting color with natural plant-based ingredients', 'makeup'),
-('Cream Blush', 'Natural Glow', 29.99, 4.3, 'images/cream-blush.jpg', 'Smooth, buildable cheek color with sustainable packaging', 'makeup'),
-('Eyeshadow Palette', 'Green Cosmetics', 48.00, 4.7, 'images/eyeshadow-palette.jpg', 'Versatile palette with highly pigmented, cruelty-free shades', 'makeup');
+('Tinted Moisturizer', 'Mac', 36.99, 4.5, 'images/tinted-moisturizer.jpg', 'Lightweight coverage with SPF protection', 'makeup'),
+('Lipstick', 'Charlotte Tilbury', 24.50, 4.4, 'images/organic-lipstick.jpg', 'Long-lasting color with natural plant-based ingredients', 'makeup'),
+('Cream Blush', 'Maybelline New York', 29.99, 4.3, 'images/cream-blush.jpg', 'Smooth, buildable cheek color with sustainable packaging', 'makeup'),
+('Eyeshadow Palette', 'Rare Beauty', 48.00, 4.7, 'images/eyeshadow-palette.jpg', 'Versatile palette with highly pigmented, cruelty-free shades', 'makeup');
 
 -- Body Care Products with Preferred Brands
 INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
