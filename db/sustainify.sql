@@ -136,6 +136,14 @@ INSERT INTO products (name, brand, price, rating, image_url, description, catego
 ('Cream Blush', 'Natural Glow', 29.99, 4.3, 'images/cream-blush.jpg', 'Smooth, buildable cheek color with sustainable packaging', 'makeup'),
 ('Eyeshadow Palette', 'Green Cosmetics', 48.00, 4.7, 'images/eyeshadow-palette.jpg', 'Versatile palette with highly pigmented, cruelty-free shades', 'makeup');
 
+-- Body Care Products with Preferred Brands
+INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
+('Moisturizing Body Lotion', 'Cerave', 18.99, 4.5, 'images/body-lotion-cerave.jpg', 'Hydrating body lotion with ceramides and hyaluronic acid', 'bodycare'),
+('Shea Butter Body Cream', 'Think Shea', 22.50, 4.7, 'images/shea-body-cream.jpg', 'Rich body cream with 100% natural shea butter', 'bodycare'),
+('Organic Cocoa Body Scrub', 'Skin Gourmet', 20.99, 4.6, 'images/cocoa-body-scrub.jpg', 'Exfoliating scrub with raw cocoa and coconut oil', 'bodycare'),
+('Nourishing Hair & Body Oil', 'Fenty', 39.50, 4.8, 'images/hair-body-oil-fenty.jpg', 'Lightweight oil blend for hair and body with jojoba and argan oils', 'bodycare'),
+('Gentle Body Wash', 'Simple', 12.50, 4.3, 'images/body-wash-simple.jpg', 'Mild body wash with soothing chamomile and aloe vera', 'bodycare'),
+('Natural Deodorant', 'Nokware', 14.75, 4.5, 'images/natural-deodorant-nokware.jpg', 'Aluminum-free deodorant with shea butter and essential oils', 'bodycare');
 
 INSERT INTO sections (title, content, icon) VALUES
 ('Our Mission', "We believe that beauty shouldn't come at the cost of our planet. Our mission is to...", 'path-to-mission-icon'),
