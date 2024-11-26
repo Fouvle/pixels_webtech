@@ -95,7 +95,7 @@ SELECT *
 FROM users
 WHERE userrole = 'admin';
 
--- Skincare Products
+-- Haircare Products
 INSERT INTO products (name, brand, price, rating, image_url, description, category)
 VALUES
     ("Rosemary Mint Scalp & Hair Strengthening Oil", "Mielle Cosmetics", 9.99, 3.5, "images/RMHairMasque-Front_600x.png",
@@ -115,15 +115,15 @@ VALUES
 
 -- Skincare Products
 INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
-('Hydrating Face Cream', 'Eco Glow', 34.99, 4.5, 'images/hydrating-cream.jpg', 'Intense moisture for all skin types with natural ingredients', 'skincare'),
-('Gentle Facial Cleanser', 'Green Essence', 24.99, 4.3, 'images/gentle-cleanser.jpg', 'Mild daily cleanser with organic botanical extracts', 'skincare'),
-('Vitamin C Serum', 'Pure Radiance', 45.50, 4.7, 'images/vitamin-c-serum.jpg', 'Brightening serum to even skin tone and boost collagen', 'skincare'),
-('Nourishing Night Cream', 'Botanical Beauty', 39.99, 4.4, 'images/night-cream.jpg', 'Overnight regenerative cream with plant-based peptides', 'skincare'),
-('Hyaluronic Acid Moisturizer', 'Hydra Glow', 32.50, 4.6, 'images/hyaluronic-moisturizer.jpg', 'Intense hydration with multi-molecular hyaluronic acid', 'skincare');
+('Fat Water Niacinamide Pore-Refining Toner Serum with Barbados Cherry', 'Fenty Beauty', 34.99, 4.5, 'fenty toner.jpg', 'Intense moisture for all skin types with natural ingredients', 'skincare'),
+('NIACINAMIDE 10%+TXA 4% Serum', 'Anua', 24.99, 4.3, 'Anua SERUM.jpg', 'Mild serum with organic botanical extracts', 'skincare'),
+('Toleriane Purifying Foaming Face Wash', 'La Roche Posay', 45.50, 4.7, 'la Roche.jpg', 'Brightening serum to even skin tone and boost collagen', 'skincare'),
+('Neutrogena® Hydro Boost Night Cream', 'Neutrogena', 39.99, 4.4, 'Neutrogena.jpg', 'Overnight regenerative cream with plant-based peptides', 'skincare'),
+('Natural Moisturizing Factors + HA', 'The Ordinary', 32.50, 4.6, 'the-ordinary.jpg', 'Intense hydration with multi-molecular hyaluronic acid', 'skincare');
 
 -- Makeup Products
 INSERT INTO products (name, brand, price, rating, image_url, description, category) VALUES
-('Mineral Foundation', 'Clean Beauty', 42.00, 4.6, 'images/mineral-foundation.jpg', 'Zero-waste powder foundation with natural minerals', 'makeup'),
+("Pro Filtr Soft Matte Longwear Foundation, 'Fenty Beauty', 42.00, 4.6, 'images/mineral-foundation.jpg', 'Zero-waste powder foundation with natural minerals', 'makeup'),
 ('Tinted Moisturizer', 'Vegan Glam', 36.99, 4.5, 'images/tinted-moisturizer.jpg', 'Lightweight coverage with SPF protection', 'makeup'),
 ('Organic Lipstick', 'Eco Chic', 24.50, 4.4, 'images/organic-lipstick.jpg', 'Long-lasting color with natural plant-based ingredients', 'makeup'),
 ('Cream Blush', 'Natural Glow', 29.99, 4.3, 'images/cream-blush.jpg', 'Smooth, buildable cheek color with sustainable packaging', 'makeup'),
