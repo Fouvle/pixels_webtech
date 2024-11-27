@@ -1,0 +1,76 @@
+/* Global variables that combine all stylesheets */
+:root {
+    --primary-color: #db2777;    /* pink-primary */
+    --secondary-color: #be185d;  /* pink-hover */
+    --background-color: #ECF0F1; /* bg-light */
+    --text-color: #2C3E50;       /* text-dark */
+    --text-light: white;         /* text-light */
+    --accent-light: #faf5ff;     /* purple-light */
+    --content-light: #fdf2f8;    /* pink-light */
+    --border-color: #D0D3D4;     /* border-gray */
+}
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Common Layout Components */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Styles */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--secondary-color);
+}
+
+/* Main Content Area */
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Common Components */
+.card {
+    background: var(--content-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

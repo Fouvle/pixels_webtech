@@ -1,0 +1,133 @@
+/* Reset and base styles */
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff0f5;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: #fff0f3;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b9e;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6b9e;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff3a70;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    color: #ff6b9e;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Wishlist Table Styles */
+.wishlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.wishlist-table thead {
+    background-color: #ffd1dc;
+}
+
+.wishlist-table th {
+    padding: 1rem;
+    text-align: left;
+    color: #333;
+    font-weight: 500;
+}
+
+.wishlist-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ffe4e1;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+.remove-btn {
+    background-color: #ffc0cb;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff6b9e;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}

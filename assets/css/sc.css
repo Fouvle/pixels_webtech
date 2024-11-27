@@ -1,0 +1,217 @@
+/* Reset and Base Styles */
+:root {
+  --primary-pink: #FF69B4;
+  --light-pink: #FFC0CB;
+  --soft-pink: #FFB6C1;
+  --dark-pink: #DB7093;
+  --text-color: #333;
+  --background-color: #FFF0F5;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-size: 16px;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--light-pink);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.header h1, 
+.header p {
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.header p {
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Overview Card */
+.overview-card {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+}
+
+.overview-card h2 {
+  color: var(--primary-pink);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Criteria Navigation */
+.criteria-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.tab-button {
+  background-color: var(--light-pink);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tab-button:hover {
+  background-color: var(--primary-pink);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.tab-button.active {
+  background-color: var(--primary-pink);
+  color: var(--white);
+}
+
+/* Criteria Details */
+#criteria-details {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tab-content {
+  display: none;
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.1);
+  margin-bottom: 1rem;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content h3 {
+  color: var(--primary-pink);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--light-pink);
+  padding-bottom: 0.5rem;
+}
+
+/* Certifications Section */
+.certifications {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.certifications h2 {
+  color: var(--primary-pink);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.certifications-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.certification-item {
+  background-color: var(--light-pink);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.certification-item:hover {
+  background-color: var(--primary-pink);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header h1 {
+      font-size: 2rem;
+  }
+
+  .tab-button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Accessibility and Print Styles */
+@media print {
+  body {
+      background-color: white;
+  }
+  
+  .tab-content {
+      display: block !important;
+  }
+}
